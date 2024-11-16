@@ -1,0 +1,79 @@
+/* Contenedor principal */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  /* Estilo de los títulos */
+  ion-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #6200ea;
+  }
+  
+  ion-text {
+    font-size: 18px;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  /* Estilos de las opciones del menú (ion-card) */
+  .menu-option {
+    width: 80%;
+    max-width: 350px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgb(182, 10, 10);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-option:hover {
+    transform: translateY(-5px); /* Efecto hover para levantar la tarjeta */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Estilo del encabezado de las tarjetas */
+  .menu-option-header {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradiente suave */
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .menu-option-title {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* Colores personalizados de las tarjetas */
+  ion-card[color="success"] {
+    --background: #8bc34a;
+    --color: white;
+  }
+  
+  ion-card[color="tertiary"] {
+    --background: #607d8b;
+    --color: white;
+  }
+  
+  ion-card[color="danger"] {
+    --background: #f44336;
+    --color: white;
+  }
+  
+  /* Estilos responsive */
+  @media (max-width: 767px) {
+    .menu-option {
+      width: 90%;
+    }
+  
+    ion-text h1 {
+      font-size: 28px;
+    }
+  }
+  

@@ -1,0 +1,67 @@
+.styled-content {
+  background-color: #f4f5f8;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.game-card {
+  width: 90%;
+  max-width: 400px;
+  background-color: #f57a32e8;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-card-header {
+  background-color: #0044cc;
+  color: #ffffff;
+  border-radius: 12px 12px 0 0;
+  padding: 10px;
+}
+
+.game-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.game-card-content {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.intro-text {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-item {
+  margin-bottom: 20px;
+}
+
+.styled-button {
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.message-card {
+  margin-top: 20px;
+  width: 90%;
+  max-width: 400px;
+  background-color: #e0f7fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(190, 79, 5, 0.753);
+}
+
+.message {
+  font-size: 18px;
+  color: #00796b;
+  padding: 20px;
+  font-weight: bold;
+}
