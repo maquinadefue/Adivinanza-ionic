@@ -65,3 +65,7 @@
   padding: 20px;
   font-weight: bold;
 }
+ion-content {
+  --background: url('/assets/menu.jpg') no-repeat center center;
+  --background-size: cover;
+}

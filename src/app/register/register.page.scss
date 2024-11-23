@@ -9,3 +9,9 @@
     text-align: center; 
     margin-top: 10px; 
   }
+  ion-content {
+    --background: url('/assets/menu.jpg') no-repeat center center;
+    --background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);  /* Fondo semitransparente */
+  }
+  

@@ -1,38 +1,54 @@
-<ion-content class="ion-padding"> 
-  <div class="login-container"> 
-    <ion-card mode="ios"> 
-      <ion-card-header class="ion-text-center"> 
-        <ion-card-title>Bienvenido</ion-card-title> 
-        <ion-card-subtitle>Adivina el numero</ion-card-subtitle> 
-      </ion-card-header> 
- 
-      <ion-card-content> 
-        <form #frmLogin="ngForm"> 
-          <!-- Campo de Usuario --> 
-          <ion-item> 
-            <ion-label position="floating">Usuario</ion-label> 
-            <ion-input [(ngModel)]="usuario" type="text" name="username" required></ion-input> 
-          </ion-item> 
- 
-          <!-- Campo de Contraseña --> 
-          <ion-item> 
-            <ion-label position="floating">Contraseña</ion-label> 
-            <ion-input [(ngModel)]="password" type="password" name="password" required></ion-input> 
-          </ion-item> 
-          <br/> 
- 
-          <!-- Botón de Ingresar --> 
-          <ion-button (click)="onClickIngresar(frmLogin)" expand="block" color="primary">Ingresar</ion-button> 
+<ion-content class="ion-padding" style="background: url('/assets/menu.jpg') no-repeat center center; background-size: cover;">
+  <div class="login-container">
+    <ion-card mode="ios">
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>Bienvenido</ion-card-title>
+        <ion-card-subtitle>Adivina el número</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form #frmLogin="ngForm" (ngSubmit)="onClickIngresar(frmLogin)">
+          <!-- Campo de Usuario -->
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input 
+              [(ngModel)]="usuario" 
+              type="text" 
+              name="username" 
+              required 
+              minlength="3" 
+              [class.invalid]="frmLogin.controls['username']?.invalid && frmLogin.controls['username']?.touched">
+            </ion-input>
+          </ion-item>
+
+          <!-- Campo de Contraseña -->
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input 
+              [(ngModel)]="password" 
+              type="password" 
+              name="password" 
+              required 
+              minlength="6" 
+              [class.invalid]="frmLogin.controls['password']?.invalid && frmLogin.controls['password']?.touched">
+            </ion-input>
+          </ion-item>
+          <br/>
+
+          <!-- Botón de Ingresar -->
+          <ion-button type="submit" expand="block" color="primary" [disabled]="frmLogin.invalid">
+            Ingresar
+          </ion-button>
         </form>
-         
-        <!-- Enlace para registrarse --> 
-        <div class="register-link"> 
-          <ion-label> 
-            ¿No tienes cuenta? 
-            <a routerLink="/register">Regístrate aquí</a> 
-          </ion-label> 
-        </div> 
-      </ion-card-content> 
-    </ion-card> 
-  </div> 
+
+        <!-- Enlace para registrarse -->
+        <div class="register-link">
+          <ion-label>
+            ¿No tienes cuenta?
+            <a routerLink="/register">Regístrate aquí</a>
+          </ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
