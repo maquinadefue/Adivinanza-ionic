@@ -22,11 +22,10 @@
     </ion-card>
 
     <!-- Opción Salir -->
-    <ion-card class="menu-option" mode="ios" routerLink="/login" color="danger">
+    <ion-card class="menu-option" mode="ios" (click)="presentExitAlert()" color="danger">
       <ion-card-header class="menu-option-header">
         <ion-card-title class="menu-option-title">Salir</ion-card-title>
       </ion-card-header>
     </ion-card>
   </div>
 </ion-content>
-
